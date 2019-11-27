@@ -1,4 +1,52 @@
-$color_theme:#0073e6;
-.sasstest{
-    color: $color_theme;
+@import "../../app.scss";
+// 嵌套
+.nestedsty {
+  background-color: $color_theme;
+  width: 90%;
+  margin: 0 auto;
+  .inlinesty {
+    color: #fff;
+    font-size: $ft_16;
+  }
+}
+.top {
+  font-size: 28px;
+  &_txt {
+    font-weight: bold;
+    color: #0073e6;
+  }
+  &_bggrey {
+    width: 200px;
+    height: 200px;
+    background-color: #f7f7f7;
+  }
+}
+// 属性嵌套
+.fontsty {
+  font: {
+    size: 40px;
+    weight: 500;
+  }
+}
+// --------------继承-------------
+%btn_mid {
+  width: 20%;
+  height: 80px;
+  color: #fff;
+}
+.btn {
+  &_success {
+    @extend %btn_mid;
+    background-color: green;
+  }
+
+  &_error {
+    @extend %btn_mid;
+    background-color: red;
+  }
+
+  &_warning {
+    @extend %btn_mid;
+    background-color: yellow;
+  }
 }
