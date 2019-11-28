@@ -50,17 +50,69 @@
     background-color: yellow;
   }
 }
-.lbt{
-    font-size: 22px;
-    border: 1px solid #0073e6;
+.lbt {
+  font-size: 22px;
+  border: 1px solid #0073e6;
 }
-.bobatn{
-    &_cred{
-        @extend .lbt;
-        color: red;
+.bobatn {
+  &_cred {
+    @extend .lbt;
+    color: red;
+  }
+  &_cyellow {
+    @extend .lbt;
+    color: yellow;
+  }
+}
+
+// 混合mixin
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+.box {
+  @include border-radius(10px);
+  margin: 0 auto;
+  width: 50%;
+  background-color: #f7f7f7;
+}
+
+@mixin positions($pos, $top, $left, $zindex) {
+  position: $pos;
+  top: $top;
+  left: $left;
+  z-index: $zindex;
+}
+// 两种参数写法
+.fixl {
+  @include positions(fixed, 900px, 30px, 666);
+  background-color: #0073e6;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  font-size: 28px;
+}
+.fixl2 {
+  @include positions($pos: fixed, $top: 900px, $left: 200px, $zindex: 666);
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  font-size: 28px;
+}
+// 循环样式
+@for $i from 1 through 4 {
+  .box_#{$i} {
+    width: 200px;
+    height: 50px;
+    @if ($i==1) {
+      background-color: #0073e6;
+    } @else {
+      background-color: red;
+      border-radius: 12px;
     }
-    &_cyellow{
-        @extend .lbt;
-        color: yellow;
-    }
+  }
 }
