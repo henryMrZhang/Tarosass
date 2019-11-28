@@ -36,6 +36,9 @@ export default class Index extends Component {
         <View className='btn_success'></View>
         <View className='btn_error'></View>
         <View className='btn_warning'></View>
+
+        <View className='bobatn_cred'>红</View>
+        <View className='bobatn_cyellow'>黄</View>
       </View>
     )
   }

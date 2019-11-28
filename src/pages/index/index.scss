@@ -50,4 +50,17 @@
     background-color: yellow;
   }
 }
-
+.lbt{
+    font-size: 22px;
+    border: 1px solid #0073e6;
+}
+.bobatn{
+    &_cred{
+        @extend .lbt;
+        color: red;
+    }
+    &_cyellow{
+        @extend .lbt;
+        color: yellow;
+    }
+}
