@@ -52,6 +52,8 @@ export default class Index extends Component {
         <View className='box_2'>2</View>
         <View className='box_3'>3</View>
         <View className='box_4'>4</View>
+        <View className='title1'>楼盘测评</View>
+        
       </View>
     )
   }
