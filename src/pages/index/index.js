@@ -8,6 +8,12 @@ export default class Index extends Component {
   config = {
     navigationBarTitleText: '首页'
   }
+  constructor(props) {
+    super(props)
+    this.state = {
+        test: ''
+    }
+}
 
   componentWillMount () { }
 
@@ -36,6 +42,18 @@ export default class Index extends Component {
         <View className='btn_success'></View>
         <View className='btn_error'></View>
         <View className='btn_warning'></View>
+        <View className='bobatn_cred'>红</View>
+        <View className='bobatn_cyellow'>黄</View>
+
+        <View className='box'>12122</View>
+        <View className='fixl'>Mixin</View>
+        <View className='fixl2'>嗯哼</View>
+        <View className='box_1'>1</View>
+        <View className='box_2'>2</View>
+        <View className='box_3'>3</View>
+        <View className='box_4'>4</View>
+        <View className='title1'>楼盘测评</View>
+        
       </View>
     )
   }
