@@ -1,0 +1,25 @@
+@import "../app.scss";
+.boxes {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #eaeaea;
+  //   position: relative;
+
+  .smallbox {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: #0073e6;
+    top: 0;
+    left: 0;
+    z-index: 123;
+    transition: all 0.7s ease-in-out;
+  }
+  &:hover .smallbox {
+    top: 150px;
+  }
+}
+
+// .colooo{
+//     color: $color_theme;
+// }
