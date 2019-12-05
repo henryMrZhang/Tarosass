@@ -15,7 +15,8 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/index/css3study',
-      'pages/my/my'
+      'pages/my/my',
+      'pages/index/flexcol'
     ],
     window: {
       backgroundTextStyle: 'light',
